@@ -8,4 +8,5 @@ The topology is shown below. The username/password for vJunos-switch nodes is `a
 ![bridged-overlay-topology](/static/images/juniper-bridged-overlay.png)
 
 
-<img width="1026" height="641" alt="Screenshot 2026-09-29 at 9 07 10 PM" src="https://github.com/user-attachments/assets/a239898d-05ea-4f66-9c8c-bf6bb55b0af4" />
+<img width="1028" height="625" alt="Screenshot 2026-09-29 at 9 08 09 PM" src="https://github.com/user-attachments/assets/5512fe56-9056-4b4c-8baa-922390413206" />
+

@@ -1,0 +1,127 @@
+interfaces {
+    ge-0/0/0 {
+        unit 0 {
+            family inet {
+                address 198.51.100.29/31;
+            }
+        }
+    }
+    ge-0/0/1 {
+        unit 0 {
+            family inet {
+                address 198.51.100.31/31;
+            }
+        }
+    }
+    ge-0/0/2 {
+        unit 0 {
+            family inet {
+                address 198.51.100.33/31;
+            }
+        }
+    }
+    ge-0/0/3 {
+        unit 0 {
+            family inet {
+                address 198.51.100.35/31;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 192.0.2.150/32;
+            }
+        }
+    }
+}
+policy-options {
+    policy-statement allow-loopback {
+        term 1 {
+            from {
+                protocol direct;
+                route-filter 192.0.2.0/24 orlonger;
+            }
+            then accept;
+        }
+        term 2 {
+            from {
+                protocol bgp;
+                route-filter 192.0.2.0/24 orlonger;
+            }                           
+            then accept;
+        }
+        term deny-all {
+            then reject;
+        }
+    }
+}
+routing-options {
+    router-id 192.0.2.150;
+    autonomous-system 65510;
+}
+protocols {
+    bgp {
+        group dc1-underlay {
+            type external;
+            family inet {
+                unicast;
+            }
+            export allow-loopback;
+            neighbor 198.51.100.28 {
+                peer-as 65500;
+            }
+            neighbor 198.51.100.30 {
+                peer-as 65500;
+            }
+        }
+        group dc2-underlay {
+            type external;
+            family inet {
+                unicast;
+            }
+            export allow-loopback;
+            neighbor 198.51.100.32 {
+                peer-as 65501;
+            }
+            neighbor 198.51.100.34 {
+                peer-as 65501;
+            }
+        }
+        group dc1-overlay {
+            type external;
+            multihop {
+                no-nexthop-change;
+            }
+            local-address 192.0.2.150;
+            family evpn {
+                signaling;
+            }
+            neighbor 192.0.2.101 {
+                peer-as 65500;
+            }
+            neighbor 192.0.2.102 {
+                peer-as 65500;
+            }
+        }
+        group dc2-overlay {
+            type external;
+            multihop {
+                no-nexthop-change;
+            }
+            local-address 192.0.2.150;
+            family evpn {
+                signaling;
+            }
+            neighbor 192.0.2.201 {
+                peer-as 65501;
+            }
+            neighbor 192.0.2.202 {
+                peer-as 65501;
+            }
+        }
+    }
+    lldp {
+        interface all;
+    }
+}

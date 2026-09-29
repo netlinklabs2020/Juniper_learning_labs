@@ -6,3 +6,6 @@ This lab deploys a bridged overlay design (Layer 2 extension) using Juniper vJun
 The topology is shown below. The username/password for vJunos-switch nodes is `admin/admin@123` and the username/password for the servers is `admin/multit00l`.
 
 ![bridged-overlay-topology](/static/images/juniper-bridged-overlay.png)
+
+
+<img width="1026" height="641" alt="Screenshot 2026-09-29 at 9 07 10 PM" src="https://github.com/user-attachments/assets/a239898d-05ea-4f66-9c8c-bf6bb55b0af4" />

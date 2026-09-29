@@ -6,3 +6,4 @@ This lab deploys a Edge-Routed Bridging design with an asymmetric routing model 
 The topology is shown below. The username/password for vJunos-switch nodes is `admin/admin@123` and the username/password for the servers is `user/multit00l`.
 
 ![erb-topology](/static/images/juniper-erb.png)
+<img width="1037" height="637" alt="Screenshot 2026-09-29 at 9 09 18 PM" src="https://github.com/user-attachments/assets/cd555dbb-3113-4028-8078-9043b2b96524" />

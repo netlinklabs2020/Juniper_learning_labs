@@ -7,6 +7,9 @@ The topology is shown below. The username/password for vJunos-switch nodes is `a
 
 ![dci-t5-stitching-topology](/static/images/dci-t5-stitching.png)
 
+<img width="1018" height="488" alt="Screenshot 2026-09-29 at 9 13 54 PM" src="https://github.com/user-attachments/assets/ffde85f1-eefd-491b-9024-98ffb01b8ddb" />
+
+
 IP addressing for the servers is as follows:
 
 s1 - 172.16.10.1/24  

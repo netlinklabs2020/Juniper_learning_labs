@@ -6,6 +6,8 @@ This lab deploys a DCI design with Type-2 stitching (integrated interconnect) us
 The topology is shown below. The username/password for vJunos-switch nodes is `admin/admin@123` and the username/password for the servers is `user/multit00l`.
 
 ![dci-t2-stitching-topology](/static/images/dci-t2-stitching.png)
+<img width="1018" height="488" alt="Screenshot 2026-09-29 at 9 13 54 PM" src="https://github.com/user-attachments/assets/d5872319-96e8-4495-b950-15555c492eb4" />
+
 
 IP addressing for the servers is as follows:
 
